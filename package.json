@@ -1,10 +1,13 @@
 {
   "private": true,
   "scripts": {
+    "predev": "npx prisma generate",
     "dev": "next dev",
+    "prebuild": "npx prisma generate",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prisma:migrate": "npx prisma migrate deploy"
   },
   "dependencies": {
     "@prisma/client": "^3.11.0",
