@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 You can clone & create this repo with the following command
 
 ```bash
-npx create-next-app nextjs-typescript-starter --example https://github.com/steven-tey/nextjs-typescript-starter"
+npx create-next-app nextjs-typescript-starter --example "https://github.com/steven-tey/nextjs-typescript-starter"
 ```
 
 ## Getting Started
