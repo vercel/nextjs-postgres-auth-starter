@@ -1,7 +1,11 @@
 import { useSession, signIn, signOut } from 'next-auth/react'
 import Image from 'next/image'
+import { useState } from 'react';
+import NewWindow from 'react-new-window'
 
 export default function Home() {
+
+  const [popup, setPopUp] = useState(false)
   const { data: session } = useSession();
 
   console.log(session);
@@ -14,6 +18,8 @@ export default function Home() {
     e.preventDefault()
     signOut()
   }
+
+  
   return (
     <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
@@ -44,7 +50,7 @@ export default function Home() {
             }
             {!session &&
               <button
-                onClick={handleSignin}
+              onClick={() => setPopUp(true)}
                 type="submit"
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
@@ -56,6 +62,9 @@ export default function Home() {
           </div>
         </form>
       </div>
+      {popup && !session ? (
+        <NewWindow url="/sign-in" onUnload={() => setPopUp(false)} />
+      ) : null}
     </div>
   );
 }
