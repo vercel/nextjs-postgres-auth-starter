@@ -18,16 +18,13 @@ export default function Home() {
   
   return (
     <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full space-y-8">
-
-        <form className="mt-8 space-y-6" action="#" method="POST">
           <input type="hidden" name="remember" defaultValue="true" />
           <div>
             {session &&
               <>
                 <Image
                   src={session.user?.image as string}
-                  alt="Picture of the author"
+                  alt="user img"
                   width={500}
                   height={500}
                 />
@@ -54,8 +51,7 @@ export default function Home() {
                 Signin
               </button>
             }
-          </div>
-        </form>
+      
       </div>
       {popup && !session ? (
         <NewWindow url="/sign-in" onUnload={() => setPopUp(false)} />
