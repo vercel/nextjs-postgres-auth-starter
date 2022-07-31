@@ -10,10 +10,6 @@ export default function Home() {
 
   console.log(session);
 
-  const handleSignin = (e: React.SyntheticEvent) => {
-    e.preventDefault()
-    signIn()
-  }
   const handleSignout = (e: React.SyntheticEvent) => {
     e.preventDefault()
     signOut()
