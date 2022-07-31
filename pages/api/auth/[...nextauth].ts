@@ -11,7 +11,7 @@ interface ProviderType {
   clientSecret: string;
 }
 
-export default NextAuth({
+const options = {
   adapter: PrismaAdapter(prisma),
   providers: [
     GitHubProvider(<ProviderType>{
@@ -24,4 +24,5 @@ export default NextAuth({
     }),
   ],
   secret: process.env.NEXT_PUBLIC_SECRET
-})
+}
+export default (req:any, res:any) => NextAuth(req, res, options)
