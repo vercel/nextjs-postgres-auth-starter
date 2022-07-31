@@ -24,7 +24,7 @@ export default function Home() {
             {session &&
               <>
                 <Image
-                  src={session.user?.image}
+                  src={session.user?.image as string}
                   alt="Picture of the author"
                   width={500}
                   height={500}
