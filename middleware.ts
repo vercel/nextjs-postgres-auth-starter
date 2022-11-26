@@ -1,5 +1,6 @@
-import { NextRequest, NextResponse } from "next/server";
 import { getToken } from "next-auth/jwt";
+// eslint-disable-next-line @next/next/no-server-import-in-page
+import { NextRequest, NextResponse } from "next/server";
 
 export const config = {
   matcher: ["/protected", "/login"],

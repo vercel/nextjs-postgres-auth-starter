@@ -24,8 +24,8 @@
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
     "autoprefixer": "^10.4.4",
-    "eslint": "8.28.0",
-    "eslint-config-next": "^13.0.5",
+    "eslint": "8.11.0",
+    "eslint-config-next": "^13.0.2",
     "postcss": "^8.4.12",
     "prisma": "^4.6.1",
     "tailwindcss": "^3.0.23",
