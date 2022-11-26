@@ -1,14 +1,14 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="flex h-screen bg-black">
-      <Head>
+      {/* eslint-disable-next-line @next/next/no-head-element */}
+      <head>
         <title>Next.js 13 Starter</title>
         <link rel="icon" href="/favicon.ico" />
-      </Head>
+      </head>
 
       <div className="w-screen h-screen flex flex-col justify-center items-center">
         <Image

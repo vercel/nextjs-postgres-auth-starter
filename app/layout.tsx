@@ -1,6 +1,5 @@
 // These styles apply to every route in the application
 import "@/styles/globals.css";
-import Head from "next/head";
 import { Inter } from "@next/font/google";
 import Toaster from "@/components/toaster";
 
@@ -15,9 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
+      {/* eslint-disable-next-line @next/next/no-head-element */}
+      <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
+      </head>
       <Toaster />
       <body className={inter.variable}>{children}</body>
     </html>
