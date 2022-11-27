@@ -14,6 +14,7 @@ export default function Home() {
         />
         <Link
           href="/protected"
+          prefetch={false}
           className="text-stone-400 hover:text-stone-200 transition-all"
         >
           Protected Page
