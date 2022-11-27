@@ -1,5 +1,4 @@
 import { getToken } from "next-auth/jwt";
-// eslint-disable-next-line @next/next/no-server-import-in-page
 import { NextRequest, NextResponse } from "next/server";
 
 export default async function middleware(req: NextRequest) {
