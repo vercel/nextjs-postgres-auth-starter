@@ -4,11 +4,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex h-screen bg-black">
-      <head>
-        <title>Next.js 13 Starter</title>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
-
       <div className="w-screen h-screen flex flex-col justify-center items-center">
         <Image
           width={512}
