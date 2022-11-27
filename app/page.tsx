@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex h-screen bg-black">
-      {/* eslint-disable-next-line @next/next/no-head-element */}
       <head>
         <title>Next.js 13 Starter</title>
         <link rel="icon" href="/favicon.ico" />
