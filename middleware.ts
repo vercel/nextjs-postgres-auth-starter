@@ -2,10 +2,6 @@ import { getToken } from "next-auth/jwt";
 // eslint-disable-next-line @next/next/no-server-import-in-page
 import { NextRequest, NextResponse } from "next/server";
 
-export const config = {
-  matcher: ["/protected", "/login"],
-};
-
 export default async function middleware(req: NextRequest) {
   // Get the pathname of the request (e.g. /, /protected)
   const path = req.nextUrl.pathname;
