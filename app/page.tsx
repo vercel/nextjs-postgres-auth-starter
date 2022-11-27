@@ -12,13 +12,24 @@ export default function Home() {
           alt="Platforms on Vercel"
           className="w-48 h-48"
         />
-        <Link
-          href="/protected"
-          prefetch={false}
-          className="text-stone-400 hover:text-stone-200 transition-all"
-        >
-          Protected Page
-        </Link>
+        <div className="flex space-x-3">
+          <Link
+            href="/protected"
+            prefetch={false}
+            className="text-stone-400 hover:text-stone-200 transition-all"
+          >
+            Protected Page
+          </Link>
+          <p className="text-white">·</p>
+          <a
+            href="https://github.com/steven-tey/nextjs-typescript-starter"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-stone-400 hover:text-stone-200 transition-all"
+          >
+            GitHub
+          </a>
+        </div>
       </div>
     </div>
   );
