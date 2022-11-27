@@ -14,8 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <body className={inter.variable}>
       <Toaster />
-      <body className={inter.variable}>{children}</body>
+      {children}
+      </body>
     </html>
   );
 }
