@@ -7,9 +7,7 @@ export default function Toaster() {
   // workaround for react hydration error: https://nextjs.org/docs/messages/react-hydration-error
   const [isSSR, setIsSSR] = useState(true);
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setIsSSR(false);
-    }
+    setIsSSR(false);
   }, []);
   return isSSR ? null : <ToasterClient />;
 }
