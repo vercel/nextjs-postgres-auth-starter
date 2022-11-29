@@ -15,6 +15,7 @@ export default function Home() {
         <div className="flex space-x-3">
           <Link
             href="/protected"
+            prefetch={false}
             className="text-stone-400 hover:text-stone-200 transition-all"
           >
             Protected Page
