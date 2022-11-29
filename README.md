@@ -15,7 +15,7 @@ and a MySQL database to persist the data.</p>
 
 You can clone & deploy it to Vercel with one click:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsteven-tey%2Fnextjs-mysql-auth-starter&project-name=nextjs-mysql-auth-starter&repository-name=nextjs-mysql-auth-starter&demo-title=Next.js%20MySQL%20Auth%20Starter&demo-description=Simple%20Next.js%20starter%20kit%20that%20uses%20Next-Auth%20for%20auth%20and%20MySQL%20as%20a%20database.&demo-url=https%3A%2F%2Fnextjs-mysql-auth.vercel.app%2F&demo-image=https%3A%2F%2Fraw.githubusercontent.com%2Fsteven-tey%2Fnextjs-typescript-starter%2Fmain%2Fpublic%2Fthumbnail.png&integration-ids=oac_eGEyJUf8jDjOQSCNJiyYRbfX)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=Next.js%20MySQL%20Auth%20Starter&demo-description=Simple%20Next.js%20starter%20kit%20that%20uses%20Next-Auth%20for%20auth%20and%20MySQL%20as%20a%20database.&demo-url=https%3A%2F%2Fnextjs-mysql-auth.vercel.app%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F7rsVQ1ZBSiWe9JGO6FUeZZ%2F210cba91036ca912b2770e0bd5d6cc5d%2Fthumbnail.png&project-name=Next.js%20MySQL%20Auth%20Starter&repository-name=nextjs-mysql-auth-starter&repository-url=https%3A%2F%2Fgithub.com%2Fsteven-tey%2Fnextjs-mysql-auth-starter&from=templates&integration-ids=oac_eGEyJUf8jDjOQSCNJiyYRbfX&env=NEXTAUTH_SECRET&envDescription=Generate%20a%20random%20secret%3A&envLink=https%3A%2F%2Fgenerate-secret.vercel.app%2F)
 
 ## Developing Locally
 
