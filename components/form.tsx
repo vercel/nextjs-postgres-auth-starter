@@ -74,7 +74,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
       </div>
       <div>
         <label
-          htmlFor="email"
+          htmlFor="password"
           className="block text-xs text-gray-600 uppercase"
         >
           Password
