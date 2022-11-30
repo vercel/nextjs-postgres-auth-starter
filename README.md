@@ -1,7 +1,7 @@
 <p align="center">
   <a href="https://nextjs-mysql-auth.vercel.app/">
     <img src="/public/logo.png" height="96">
-    <h3 align="center">Next.js MySQL Auth Starter</h3>
+    <h3 align="center">Next.js Prisma MySQL Auth Starter</h3>
   </a>
 </p>
 

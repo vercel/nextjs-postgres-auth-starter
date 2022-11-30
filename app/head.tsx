@@ -1,5 +1,5 @@
 export default function Head() {
-  const title = "Next.js MySQL Auth Starter";
+  const title = "Next.js Prisma MySQL Auth Starter";
   const description =
     "This is a Next.js starter kit that uses Next-Auth for simple email + password login and a MySQL database to persist the data.";
   const image = "https://nextjs-mysql-auth.vercel.app/thumbnail.png";
