@@ -1,13 +1,13 @@
 {
   "private": true,
   "scripts": {
-    "predev": "npx prisma generate",
     "dev": "next dev",
-    "prebuild": "npx prisma generate",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prisma:migrate": "npx prisma migrate deploy"
+    "prebuild": "prisma generate",
+    "predev": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy"
   },
   "dependencies": {
     "@next/font": "^13.0.5",
