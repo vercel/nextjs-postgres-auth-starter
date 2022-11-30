@@ -7,7 +7,7 @@
 
 <p align="center">
 This is a <a href="https://nextjs.org/">Next.js</a> starter kit that uses <a href="https://next-auth.js.org/">Next-Auth</a> for simple email + password login<br/>
-and a MySQL database to persist the data.</p>
+[Prisma](https://www.prisma.io/) as the OR, and a MySQL database to persist the data.</p>
 
 <br/>
 
