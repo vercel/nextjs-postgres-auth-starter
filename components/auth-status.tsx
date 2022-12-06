@@ -1,4 +1,4 @@
-import { unstable_getServerSession } from "next-auth";
+import { unstable_getServerSession } from "next-auth/next";
 
 export default async function AuthStatus() {
   const session = await unstable_getServerSession();
