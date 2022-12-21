@@ -9,21 +9,23 @@ const Navbar: React.FC<NavbarProps> = (): ReactElement => {
   return (
     <nav style={{ display: 'flex', alignItems: 'center', background: '#333333' }}>
       <Link href="/">
-        <a>
-          <img src="/logo.svg" alt="Logo" style={{ width: 50, height: 50, margin: '0 15px' }} />
-        </a>
+
+        <img src="/logo.svg" alt="Logo" style={{ width: 50, height: 50, margin: '0 15px' }} />
+
       </Link>
-      <Link href="/">
-        <a style={{ color: '#FFFFFF', fontSize: 18 }}>Home</a>
+      <Link href="/" style={{ color: '#FFFFFF', fontSize: 18 }}>
+        Home
       </Link>
-      <Link href="/profile">
-        <a style={{ color: '#FFFFFF', fontSize: 18, margin: '0 15px' }}>Profile</a>
+      <Link
+        href="/profile"
+        style={{ color: '#FFFFFF', fontSize: 18, margin: '0 15px' }}>
+        Profile
       </Link>
-      <Link href="/gallery">
-        <a style={{ color: '#FFFFFF', fontSize: 18 }}>Gallery</a>
+      <Link href="/gallery" style={{ color: '#FFFFFF', fontSize: 18 }}>
+        Gallery
       </Link>
     </nav>
-  )
+  );
 }
 
 export default Navbar
