@@ -7,17 +7,17 @@ interface NavigationHeaderProps {
 const NavigationHeader: React.FC<NavigationHeaderProps> = () => {
   return (
     <div style={{ background: 'linear-gradient(to right, #0062E6, #33AEFF)' }}>
-      <Link href="/">
-        <a style={{ marginRight: 15 }}>Home</a>
+      <Link href="/" style={{ marginRight: 15 }}>
+        Home
       </Link>
-      <Link href="/profile">
-        <a style={{ marginRight: 15 }}>Profile</a>
+      <Link href="/profile" style={{ marginRight: 15 }}>
+        Profile
       </Link>
       <Link href="/gallery">
-        <a>Gallery</a>
+        Gallery
       </Link>
     </div>
-  )
+  );
 }
 
 export default NavigationHeader
