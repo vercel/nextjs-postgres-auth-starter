@@ -1,23 +1,29 @@
 import Link from 'next/link'
+import { ReactElement } from 'react'
 
-interface NavigationHeaderProps {
+interface NavbarProps {
   // you can add props here if needed
 }
 
-const NavigationHeader: React.FC<NavigationHeaderProps> = () => {
+const Navbar: React.FC<NavbarProps> = (): ReactElement => {
   return (
-    <div style={{ background: 'linear-gradient(to right, #0062E6, #33AEFF)' }}>
-      <Link href="/" style={{ marginRight: 15 }}>
-        Home
+    <nav style={{ display: 'flex', alignItems: 'center', background: '#333333' }}>
+      <Link href="/">
+        <a>
+          <img src="/logo.svg" alt="Logo" style={{ width: 50, height: 50, margin: '0 15px' }} />
+        </a>
       </Link>
-      <Link href="/profile" style={{ marginRight: 15 }}>
-        Profile
+      <Link href="/">
+        <a style={{ color: '#FFFFFF', fontSize: 18 }}>Home</a>
+      </Link>
+      <Link href="/profile">
+        <a style={{ color: '#FFFFFF', fontSize: 18, margin: '0 15px' }}>Profile</a>
       </Link>
       <Link href="/gallery">
-        Gallery
+        <a style={{ color: '#FFFFFF', fontSize: 18 }}>Gallery</a>
       </Link>
-    </div>
-  );
+    </nav>
+  )
 }
 
-export default NavigationHeader
+export default Navbar
