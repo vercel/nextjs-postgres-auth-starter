@@ -7,7 +7,8 @@
     "lint": "next lint",
     "prebuild": "prisma generate",
     "predev": "prisma generate",
-    "prisma:migrate": "prisma migrate deploy"
+    "prisma:migrate": "prisma migrate deploy",
+    "prisma:migrate:dev": "prisma migrate dev"
   },
   "dependencies": {
     "@next/font": "^13.0.5",

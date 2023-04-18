@@ -1,0 +1,24 @@
+version: '3'
+services:
+    postgres:
+        image: 'postgres:15'
+        ports:
+            - '${FORWARD_DB_PORT:-5432}:5432'
+        environment:
+            POSTGRES_PASSWORD: '${DB_PASSWORD}'
+            POSTGRES_DB: '${DB_DATABASE}'
+            POSTGRES_USER: '${DB_USERNAME}'
+        volumes:
+            - 'postgres-v1:/var/lib/postgresql/data'
+        networks:
+            - postgres-n1
+        healthcheck:
+            test: [ "CMD", "pg_isready", "-U", "${DB_USERNAME}" ]
+            retries: 3
+            timeout: 5s
+networks:
+    postgres-n1:
+        driver: bridge
+volumes:
+    postgres-v1:
+        driver: local

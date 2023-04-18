@@ -1,47 +1,41 @@
-<p align="center">
-  <a href="https://nextjs-mysql-auth.vercel.app/">
-    <img src="/public/logo.png" height="96">
-    <h3 align="center">Next.js Prisma MySQL Auth Starter</h3>
-  </a>
-</p>
-
-<p align="center">
-This is a <a href="https://nextjs.org/">Next.js</a> starter kit that uses <a href="https://next-auth.js.org/">Next-Auth</a> for simple email + password login<br/>
-<a href="https://www.prisma.io/">Prisma</a> as the ORM, and a MySQL database to persist the data.</p>
-
-<br/>
-
-## Deploy Your Own
-
-You can clone & deploy it to Vercel with one click:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?demo-title=Next.js%20MySQL%20Auth%20Starter&demo-description=Simple%20Next.js%2013%20starter%20kit%20that%20uses%20Next-Auth%20for%20auth%20and%20MySQL%20as%20a%20database.&demo-url=https%3A%2F%2Fnextjs-mysql-auth.vercel.app%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F7rsVQ1ZBSiWe9JGO6FUeZZ%2F210cba91036ca912b2770e0bd5d6cc5d%2Fthumbnail.png&project-name=Next.js%20MySQL%20Auth%20Starter&repository-name=nextjs-mysql-auth-starter&repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnextjs-mysql-auth-starter&from=templates&skippable-integrations=1&env=DATABASE_URL%2CNEXTAUTH_SECRET&envDescription=Generate%20a%20random%20secret%3A&envLink=https%3A%2F%2Fgithub.com%2Fvercel%2Fnextjs-mysql-auth-starter%2Fblob%2Fmain%2F.env.example)
-
-## Developing Locally
-
-You can clone & create this repo with the following command
-
-```bash
-npx create-next-app nextjs-typescript-starter --example "https://github.com/vercel/nextjs-mysql-auth-starter"
-```
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<h1>Next.js PostgreSQL Auth Starter</h1>
+<p>This is a starter project for building web applications using Next.js, PostgreSQL, Prisma and Next-Auth for authentication.</p>
+<h2>Configuration and Setup</h2>
+<p>Follow the steps below to configure and run the project:</p>
+<ol>
+    <li>Navigate to the <code>PostgreSQL</code> directory and copy the example environment variables file:</li>
+</ol>
+<pre><code>cd PostgreSQL &amp;&amp; cp .env.example .env
+</code></pre>
+<ol start="2">
+    <li>Set the environment variables in the <code>.env</code> file for your PostgreSQL database.</li>
+    <li>Start the PostgreSQL server using Docker Compose:</li>
+</ol>
+<pre><code>cd PostgreSQL &amp;&amp; docker compose up -d
+</code></pre>
+<ol start="4">
+    <li>In the root directory of the project, copy the example environment variables file:</li>
+</ol>
+<pre><code>cp .env.example .env
+</code></pre>
+<ol start="5">
+    <li>Set the environment variables in the <code>.env</code> file according to your requirements.</li>
+    <li>Run <code>nvm use</code> to use the Node version specified in the <code>.nvmrc</code> file.</li>
+    <li>Run the following command to run the Prisma migrations:</li>
+</ol>
+<pre><code>npm run prisma:migrate:dev
+</code></pre>
+<ol start="8">
+    <li>Finally, start the development server using the following command:</li>
+</ol>
+<pre><code>npm run dev
+</code></pre>
+<p>You should now be able to access the project by navigating to <code>http://localhost:3000</code> in your web browser.</p>
+<h2>Contributing</h2>
+<p>Contributions are welcome! To contribute to the project, please follow the standard Git flow:</p>
+<ol>
+    <li>Fork the project and create a new branch</li>
+    <li>Make your changes and commit them</li>
+    <li>Push your changes to your forked repository</li>
+    <li>Create a pull request with a detailed description of the changes</li>
+</ol>
