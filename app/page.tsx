@@ -14,7 +14,7 @@ export default function Home() {
         />
         <div className="text-center max-w-screen-sm mb-10">
           <h1 className="text-stone-200 font-bold text-2xl">
-            Next.js Prisma MySQL Auth Starter
+            Next.js Prisma PostgreSQL Auth Starter
           </h1>
           <p className="text-stone-400 mt-5">
             This is a{" "}
@@ -35,8 +35,8 @@ export default function Home() {
             >
               Next-Auth
             </a>{" "}
-            for simple email + password login and a MySQL database to persist
-            the data.
+            for simple email + password login and a PostgreSQL database to
+            persist the data.
           </p>
         </div>
         <div className="flex space-x-3">
