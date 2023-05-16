@@ -23,10 +23,12 @@ export default function Form({ type }: { type: "login" | "register" }) {
             password: e.currentTarget.password.value,
             // @ts-ignore
           }).then(({ ok, error }) => {
+            console.log("ok", ok, "error", error);
             setLoading(false);
             if (ok) {
               router.push("/protected");
-            } else {
+            }
+            if (error) {
               toast.error(error);
             }
           });
@@ -48,7 +50,8 @@ export default function Form({ type }: { type: "login" | "register" }) {
                 router.push("/login");
               }, 2000);
             } else {
-              toast.error(await res.text());
+              const { error } = await res.json();
+              toast.error(error);
             }
           });
         }
