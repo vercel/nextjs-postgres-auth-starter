@@ -7,7 +7,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@next/font": "^13.0.5",
     "@prisma/client": "^4.14.0",
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
