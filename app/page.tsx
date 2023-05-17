@@ -35,8 +35,16 @@ export default function Home() {
             >
               Next-Auth
             </a>{" "}
-            for simple email + password login and a PostgreSQL database to
-            persist the data.
+            for simple email + password login and a{" "}
+            <a
+              href="https://vercel.com/postgres"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-stone-400 underline hover:text-stone-200 transition-all"
+            >
+              Vercel Postgres
+            </a>{" "}
+            database to persist the data.
           </p>
         </div>
         <div className="flex space-x-3">
