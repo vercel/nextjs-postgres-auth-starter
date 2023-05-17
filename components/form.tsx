@@ -18,7 +18,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
         setLoading(true);
         if (type === "login") {
           signIn("credentials", {
-            callbackUrl: "/protected",
+            redirect: false,
             email: e.currentTarget.email.value,
             password: e.currentTarget.password.value,
             // @ts-ignore
@@ -26,6 +26,9 @@ export default function Form({ type }: { type: "login" | "register" }) {
             setLoading(false);
             if (error) {
               toast.error(error);
+            } else {
+              router.refresh();
+              router.push("/protected");
             }
           });
         } else {
