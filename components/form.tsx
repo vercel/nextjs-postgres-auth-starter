@@ -23,8 +23,8 @@ export default function Form({ type }: { type: "login" | "register" }) {
             password: e.currentTarget.password.value,
             // @ts-ignore
           }).then(({ error }) => {
-            setLoading(false);
             if (error) {
+              setLoading(false);
               toast.error(error);
             } else {
               router.refresh();
