@@ -64,6 +64,15 @@ export default function Home() {
           >
             GitHub
           </a>
+          <p className="text-white">·</p>
+          <a
+            href="https://vercel.com/templates/next.js/prisma-postgres-auth-starter"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-stone-400 underline hover:text-stone-200 transition-all"
+          >
+            1-click Deploy to Vercel
+          </a>
         </div>
       </div>
     </div>
