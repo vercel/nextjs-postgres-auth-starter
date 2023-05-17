@@ -18,16 +18,12 @@ export default function Form({ type }: { type: "login" | "register" }) {
         setLoading(true);
         if (type === "login") {
           signIn("credentials", {
-            redirect: false,
+            callbackUrl: "/protected",
             email: e.currentTarget.email.value,
             password: e.currentTarget.password.value,
             // @ts-ignore
-          }).then(({ ok, error }) => {
-            console.log("ok", ok, "error", error);
+          }).then(({ error }) => {
             setLoading(false);
-            if (ok) {
-              router.push("/protected");
-            }
             if (error) {
               toast.error(error);
             }
