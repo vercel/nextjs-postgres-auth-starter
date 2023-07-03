@@ -24,7 +24,10 @@ export const authOptions: NextAuthOptions = {
         if (!user || !(await compare(password, user.password))) {
           throw new Error("Invalid username or password");
         }
-        return user;
+        return {
+          ...user,
+          id: user.id.toString(),
+        };
       },
     }),
   ],
