@@ -1,18 +1,27 @@
-import SignOut from "@/components/sign-out";
+import { auth, signOut } from 'app/auth';
 
-export default function Home() {
+export default async function ProtectedPage() {
+  let session = await auth();
+
   return (
     <div className="flex h-screen bg-black">
-      <div className="w-screen h-screen flex flex-col space-y-5 justify-center items-center">
-        <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          className="w-full max-w-screen-lg aspect-video"
-        ></iframe>
+      <div className="w-screen h-screen flex flex-col space-y-5 justify-center items-center text-white">
+        You are logged in as {session?.user?.email}
         <SignOut />
       </div>
     </div>
+  );
+}
+
+function SignOut() {
+  return (
+    <form
+      action={async () => {
+        'use server';
+        await signOut();
+      }}
+    >
+      <button type="submit">Sign out</button>
+    </form>
   );
 }

@@ -1,47 +1,30 @@
-// These styles apply to every route in the application
-import "@/styles/globals.css";
-import { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Toaster } from "react-hot-toast";
-import AuthStatus from "@/components/auth-status";
-import { Suspense } from "react";
+import './globals.css';
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+import { GeistSans } from 'geist/font/sans';
 
-const title = "Next.js Prisma Postgres Auth Starter";
-const description =
-  "This is a Next.js starter kit that uses Next-Auth for simple email + password login and a Postgres database to persist the data.";
+let title = 'Next.js + Postgres Auth Starter';
+let description =
+  'This is a Next.js starter kit that uses NextAuth.js for simple email + password login and a Postgres database to persist the data.';
 
-export const metadata: Metadata = {
+export const metadata = {
   title,
   description,
   twitter: {
-    card: "summary_large_image",
+    card: 'summary_large_image',
     title,
     description,
   },
-  metadataBase: new URL("https://nextjs-postgres-auth.vercel.app"),
-  themeColor: "#FFF",
+  metadataBase: new URL('https://nextjs-postgres-auth.vercel.app'),
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
-        <Toaster />
-        <Suspense fallback="Loading...">
-          {/* @ts-expect-error Async Server Component */}
-          <AuthStatus />
-        </Suspense>
-        {children}
-      </body>
+      <body className={GeistSans.variable}>{children}</body>
     </html>
   );
 }
