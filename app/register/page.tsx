@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Form } from 'app/form';
 import { redirect } from 'next/navigation';
 import { createUser, getUser } from 'app/db';
+import { SubmitButton } from 'app/submit-button';
 
 export default function Login() {
   async function register(formData: FormData) {
@@ -28,12 +29,7 @@ export default function Login() {
           </p>
         </div>
         <Form action={register}>
-          <button
-            type="submit"
-            className="flex h-10 w-full items-center justify-center rounded-md border text-sm transition-all focus:outline-none"
-          >
-            Sign Up
-          </button>
+          <SubmitButton>Sign Up</SubmitButton>
           <p className="text-center text-sm text-gray-600">
             {'Already have an account? '}
             <Link href="/login" className="font-semibold text-gray-800">
