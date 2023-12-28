@@ -5,18 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@types/bcryptjs':
-    specifier: ^2.4.6
-    version: 2.4.6
   '@types/node':
     specifier: ^20.10.5
     version: 20.10.5
   '@types/react':
     specifier: ^18.2.45
     version: 18.2.45
-  bcryptjs:
-    specifier: ^2.4.3
-    version: 2.4.3
+  bcrypt-ts:
+    specifier: ^5.0.0
+    version: 5.0.0
   drizzle-orm:
     specifier: ^0.29.2
     version: 0.29.2(@types/react@18.2.45)(expo-sqlite@13.2.0)(postgres@3.4.3)(react@18.2.0)
@@ -2140,10 +2137,6 @@ packages:
       tslib: 2.6.2
     dev: false
 
-  /@types/bcryptjs@2.4.6:
-    resolution: {integrity: sha512-9xlo6R2qDs5uixm0bcIqCeMCE6HiQsIyel9KQySStiyqNl2tnj2mP3DX1Nf56MD6KMenNNlBBsy3LJ7gUEQPXQ==}
-    dev: false
-
   /@types/istanbul-lib-coverage@2.0.6:
     resolution: {integrity: sha512-2QF/t/auWm0lsy8XtKVPG19v3sSOQlJe/YHZgfjb/KBBHOGSV+J2q/S671rcq9uTBrLAXmZpqJiaQbMT+zNU1w==}
     dev: false
@@ -2633,8 +2626,9 @@ packages:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
     dev: false
 
-  /bcryptjs@2.4.3:
-    resolution: {integrity: sha512-V/Hy/X9Vt7f3BbPJEi8BdVFMByHi+jNXrYkW3huaybV/kQ0KJg0Y6PkEMbn+zeT+i+SiKZ/HMqJGIIt4LZDqNQ==}
+  /bcrypt-ts@5.0.0:
+    resolution: {integrity: sha512-0+VFzpOk0oIw8W8DfcCl0+xYbM04ib1u9IqkJCQQr+Vx8Pie4wzXmow+4zEnU0SP72QgPACDn0ARybH7q95Cbw==}
+    engines: {node: '>=18'}
     dev: false
 
   /better-opn@3.0.2:
