@@ -1,32 +1,19 @@
 import Link from 'next/link';
 import { Form } from 'app/form';
-import prisma from '@/app/prisma';
-import { hash } from 'bcrypt';
 import { redirect } from 'next/navigation';
+import { createUser, getUser } from 'app/db';
 
 export default function Login() {
   async function register(formData: FormData) {
     'use server';
     let email = formData.get('email') as string;
     let password = formData.get('password') as string;
+    let user = await getUser(email);
 
-    const exists = await prisma.user.findUnique({
-      where: {
-        email,
-      },
-    });
-
-    if (exists) {
-      console.log('User already exists');
+    if (user.length > 0) {
       return 'User already exists'; // TODO: Handle errors with useFormStatus
     } else {
-      await prisma.user.create({
-        data: {
-          email,
-          password: await hash(password, 10),
-        },
-      });
-      console.log('User created');
+      await createUser(email, password);
       redirect('/login');
     }
   }

@@ -2,8 +2,8 @@ import './globals.css';
 
 import { GeistSans } from 'geist/font/sans';
 
-const title = 'Next.js Prisma Postgres Auth Starter';
-const description =
+let title = 'Next.js + Postgres Auth Starter';
+let description =
   'This is a Next.js starter kit that uses NextAuth.js for simple email + password login and a Postgres database to persist the data.';
 
 export const metadata = {
@@ -17,7 +17,7 @@ export const metadata = {
   metadataBase: new URL('https://nextjs-postgres-auth.vercel.app'),
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;

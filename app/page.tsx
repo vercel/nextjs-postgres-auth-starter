@@ -20,7 +20,7 @@ export default function Page() {
         </svg>
         <div className="text-center max-w-screen-sm mb-10">
           <h1 className="text-stone-200 font-bold text-2xl">
-            Next.js Prisma PostgreSQL Auth Starter
+            Next.js + Postgres Auth Starter
           </h1>
           <p className="text-stone-400 mt-5">
             This is a{' '}
@@ -48,7 +48,7 @@ export default function Page() {
               rel="noopener noreferrer"
               className="text-stone-400 underline hover:text-stone-200 transition-all"
             >
-              Vercel Postgres
+              Postgres
             </a>{' '}
             database to persist the data.
           </p>
