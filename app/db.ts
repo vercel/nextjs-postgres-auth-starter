@@ -2,7 +2,7 @@ import { drizzle } from 'drizzle-orm/postgres-js';
 import { pgTable, serial, varchar } from 'drizzle-orm/pg-core';
 import { eq } from 'drizzle-orm';
 import postgres from 'postgres';
-import { hash } from 'bcrypt';
+import { genSaltSync, hashSync } from 'bcryptjs';
 
 let client = postgres(`${process.env.POSTGRES_URL!}?sslmode=require`);
 let db = drizzle(client);
@@ -18,7 +18,8 @@ export async function getUser(email: string) {
 }
 
 export async function createUser(email: string, password: string) {
-  return await db
-    .insert(users)
-    .values({ email, password: await hash(password, 10) });
+  let salt = genSaltSync(10);
+  let hash = hashSync(password, salt);
+
+  return await db.insert(users).values({ email, password: hash });
 }
