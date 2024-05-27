@@ -18,7 +18,14 @@ npx create-next-app nextjs-typescript-starter --example "https://github.com/verc
 
 ## Getting Started
 
-First, run the development server:
+Copy .env.example to .env and add your postgresql settings, along with a randomly created AUTH_SECRET value.
+Then, apply the drizzle schema to your database:
+
+```
+drizzle-kit push
+```
+
+Finally, run the development server:
 
 ```bash
 pnpm dev
