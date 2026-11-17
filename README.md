@@ -26,6 +26,25 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## Testing
+
+Outside production, the login page also offers **Sign in with Mockatoo (dev only)**. [Mockatoo](https://mockatoo.globalunderdog.com) is a free hosted mock OAuth provider, so end-to-end tests can sign in without seeding a user. Production builds keep email + password only.
+
+Run the [Playwright](https://playwright.dev) tests:
+
+```bash
+pnpm exec playwright install chromium
+pnpm test:e2e
+```
+
+The full sign-in test is skipped unless `MOCKATOO_TEST_EMAIL` and `MOCKATOO_TEST_PASSWORD` are set. To run it, sign up at [app.mockatoo.globalunderdog.com](https://app.mockatoo.globalunderdog.com) (about a minute) and pass your test account's email and password:
+
+```bash
+MOCKATOO_TEST_EMAIL=you@example.com MOCKATOO_TEST_PASSWORD=... pnpm test:e2e
+```
+
+In CI, add them as repository secrets; [`.github/workflows/e2e.yml`](.github/workflows/e2e.yml) passes them to the tests.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

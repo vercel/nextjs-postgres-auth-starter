@@ -1,0 +1,38 @@
+name: E2E
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  e2e:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      # Placeholders: the sign-in tests don't touch the database.
+      POSTGRES_URL: postgres://user:password@localhost:5432/db
+      AUTH_SECRET: e2e-only-secret-not-used-in-production
+      # Optional repo secrets for the full sign-in test. Without them it is skipped.
+      MOCKATOO_TEST_EMAIL: ${{ secrets.MOCKATOO_TEST_EMAIL }}
+      MOCKATOO_TEST_PASSWORD: ${{ secrets.MOCKATOO_TEST_PASSWORD }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm build
+      - run: pnpm exec playwright install --with-deps chromium
+      - name: Note when the full sign-in test is skipped
+        if: env.MOCKATOO_TEST_EMAIL == ''
+        run: echo "::notice::MOCKATOO_TEST_EMAIL and MOCKATOO_TEST_PASSWORD are not set, so the full sign-in test is skipped."
+      - run: pnpm test:e2e

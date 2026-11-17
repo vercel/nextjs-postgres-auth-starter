@@ -32,6 +32,17 @@ export default function Login() {
             {' for free.'}
           </p>
         </Form>
+        {process.env.NODE_ENV !== 'production' && (
+          <form
+            action={async () => {
+              'use server';
+              await signIn('github', { redirectTo: '/protected' });
+            }}
+            className="bg-gray-50 px-4 pb-8 sm:px-16"
+          >
+            <SubmitButton>Sign in with Mockatoo (dev only)</SubmitButton>
+          </form>
+        )}
       </div>
     </div>
   );

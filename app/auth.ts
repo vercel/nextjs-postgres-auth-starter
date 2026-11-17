@@ -1,5 +1,6 @@
 import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
+import { MockGitHub } from '@mockatoo/connect-authjs';
 import { compare } from 'bcrypt-ts';
 import { getUser } from 'app/db';
 import { authConfig } from 'app/auth.config';
@@ -20,5 +21,9 @@ export const {
         if (passwordsMatch) return user[0] as any;
       },
     }),
+    // In development and tests only, add a sign-in through Mockatoo's mock of
+    // GitHub OAuth, so end-to-end tests can sign in without seeding a user.
+    // Production keeps email + password only.
+    ...(process.env.NODE_ENV === 'production' ? [] : [MockGitHub()]),
   ],
 });
