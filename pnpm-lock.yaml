@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@mockatoo/connect-authjs':
-    specifier: ^0.2.0
-    version: 0.2.0(next-auth@5.0.0-beta.23)
+    specifier: ^0.2.1
+    version: 0.2.1(next-auth@5.0.0-beta.23)
   '@types/node':
     specifier: ^20.10.5
     version: 20.10.5
@@ -1997,8 +1997,8 @@ packages:
       '@jridgewell/resolve-uri': 3.1.1
       '@jridgewell/sourcemap-codec': 1.4.15
 
-  /@mockatoo/connect-authjs@0.2.0(next-auth@5.0.0-beta.23):
-    resolution: {integrity: sha512-b1wWE+BqQvYtgpl8Oh/NAW0fB3/7+2j7mjNmMH6KA8VjdGR5+PeKEWxTcAMrAs9adnj/BO1dQCtrC7SurrrOsA==}
+  /@mockatoo/connect-authjs@0.2.1(next-auth@5.0.0-beta.23):
+    resolution: {integrity: sha512-WeM6u5HPOpjxAmA3s8K7qP1DrXTUHoBxupHGtfZCqLGbGlOlSM0xwkgmbwrAqkmgTOT9R6xUQ6azNWA0CPfcww==}
     peerDependencies:
       next-auth: ^5.0.0-beta.23
     dependencies:
